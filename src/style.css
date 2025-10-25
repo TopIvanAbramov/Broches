@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAFAF8;
+    color: #2C2C2C;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-primary text-white font-medium py-2 px-4 rounded-md transition-all duration-300 text-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .hero-fullscreen {
+    @apply relative h-screen overflow-hidden;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/40;
+  }
+  
+  .hero-content-overlay {
+    @apply absolute inset-0 flex items-center justify-center;
+  }
+  
+  .hero-text-content {
+    @apply text-center text-white px-4 max-w-4xl;
+  }
+  
+  .hero-label {
+    @apply text-sm uppercase tracking-widest mb-4 opacity-90;
+  }
+  
+  .hero-title {
+    @apply text-6xl md:text-8xl font-heading font-bold mb-6 leading-tight;
+  }
+  
+  .hero-divider {
+    @apply w-16 h-px bg-white mx-auto mb-6;
+  }
+  
+  .hero-cta {
+    @apply text-lg uppercase tracking-wide hover:opacity-80 transition-opacity duration-300;
+  }
+  
+  .hero-nav-arrow {
+    @apply absolute top-1/2 transform -translate-y-1/2 text-white/80 hover:text-white transition-colors duration-300 z-10;
+  }
+  
+  .hero-nav-arrow-left {
+    @apply left-4;
+  }
+  
+  .hero-nav-arrow-right {
+    @apply right-4;
+  }
+  
+  .hero-indicators {
+    @apply absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3;
+  }
+  
+  .hero-indicator {
+    @apply w-2 h-2 rounded-full transition-colors duration-300 cursor-pointer;
+  }
+  
+  .hero-indicator.active {
+    @apply bg-white;
+  }
+  
+  .hero-indicator.inactive {
+    @apply bg-white/50;
+  }
+  
+}
