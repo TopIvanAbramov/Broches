@@ -20,7 +20,7 @@ export class Hero {
 
   render() {
     return `
-      <div class="relative h-screen overflow-hidden">
+      <div class="relative w-full aspect-16-9 overflow-hidden">
         <!-- Full-screen background slideshow -->
         <div id="hero-slideshow" class="absolute inset-0">
           ${this.landingImages.map((image, index) => `
